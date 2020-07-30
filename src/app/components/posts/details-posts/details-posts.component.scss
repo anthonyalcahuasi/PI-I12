@@ -1,0 +1,32 @@
+.boton2 {
+    background-color: #992e45; /* Green */
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 5px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 15px;
+    font-family: 'Montserrat';
+    margin-left: 40px;
+    }
+    .boton2:hover {
+    border-radius: 15px;
+    background-color: #fff; /* Green */
+    border: none;
+    color: #992e45;
+    transition: color .5s;
+    }
+    .results {
+      background: #f2f2f2;
+      padding-top: 30px;
+      margin-top: 80px;
+      font-family: 'Montserrat';
+  }
+  .mat-card-content>p{
+    font-family: 'Montserrat';
+  }

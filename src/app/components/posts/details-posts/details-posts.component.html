@@ -1,0 +1,57 @@
+<div class="container" *ngIf="post$ | async as post; else loading">
+    
+        <mat-card class = "post-card">
+            <mat-card-content>
+                    <mat-card-title>
+                    Hola: {{post.nombre}}
+                    <br>
+                    <br>
+                    Empresa: {{post.eNombre}}
+                    </mat-card-title>
+                    <br>
+                <p class="content">
+                    Codigo: {{post.codigoU}}
+                </p>
+                <p class="content">
+                    Facultad: {{post.facultad}}
+                </p>
+                <p class="content">
+                    Escuela Profecional: {{post.escuelaP}}
+                </p>
+                <p class="content">
+                    Filial: {{post.filial}}
+                </p>
+                <p class="content">
+                    Ciclo Academico: {{post.ciclo}}
+                </p>
+                <p class="content">
+                    Tipo de empresa: {{post.eTipo}}
+                </p>
+                <p class="content">
+                    Direccion: {{post.eDireccion}}
+                </p>
+                <p class="content">
+                    Numero de Telefono: {{post.eTelefono}}
+                </p><p class="content">
+                    Nombre del Gerente: {{post.eGerente}}
+                </p>
+                <p class="content">
+                    Correo: {{post.eEmail}}
+                </p>  
+                <p class="content">
+                    Fecha que entregaste la solicitud: {{post.fecha}}
+                </p>              
+            </mat-card-content>
+        </mat-card>
+        <a routerLink="/soli" RouterLinkActive="active"><button class="boton2">REVISAR</button></a>
+</div>
+
+
+
+<ng-template #loading>
+    
+    <div class="container-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+
+</ng-template>

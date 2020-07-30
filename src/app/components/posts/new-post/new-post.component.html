@@ -1,0 +1,96 @@
+<div class="new-post-container">
+    <form [formGroup] = "newPostForm" (ngSubmit)="addNewPost(newPostForm.value)" >        
+            <div class="datosalumno">
+            <br>
+            <h2>DATOS DEL ALUMNO</h2>
+            <br>
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" formControlName="nombre" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Codigo</mat-label>
+                <input matInput placeholder="Codigo Universitario" formControlName="codigoU" >
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-select aria-placeholder="Facultad" placeholder="Facultad" formControlName="facultad">
+                    <mat-option value="FIA">FIA</mat-option>
+                    <mat-option value="FACIED">FACIED</mat-option>
+                    <mat-option value="FCS">FCiencias de la Salud</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+    
+            <mat-form-field>
+                <mat-label>Escuela Profecional</mat-label>
+                <input matInput placeholder="Escuela Profecional" formControlName="escuelaP" >
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-select aria-placeholder="ciclo" placeholder="ciclo" formControlName="ciclo">
+                    <mat-option value="primer">I</mat-option>
+                    <mat-option value="segundo">II</mat-option>
+                    <mat-option value="tercero">III</mat-option>
+                    <mat-option value="cuarto">IV</mat-option>
+                    <mat-option value="quinto">V</mat-option>
+                    <mat-option value="sexto">VI</mat-option>
+                    <mat-option value="septimo">VII</mat-option>
+                    <mat-option value="octavo">VIII</mat-option>
+                    <mat-option value="noveno">IX</mat-option>
+                    <mat-option value="decimo">X</mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <mat-select aria-placeholder="filial" placeholder="Filial" formControlName="filial">
+                    <mat-option value="Juliaca">Juliaca</mat-option>
+                    <mat-option value="Lima">Lima</mat-option>
+                    <mat-option value="Tarapoto">Tarapoto</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            </div>
+            <h2>DATOS DE LA EMPRESA</h2>
+            <br>
+            <mat-form-field>
+                <mat-label>Nombre de la Empresa</mat-label>
+                <input matInput placeholder="Nombre de la Empresa" formControlName="eNombre" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Direccion de la empresa</mat-label>
+                <input matInput placeholder="Direccion de la empresa" formControlName="eDireccion" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Telefono de la empresa</mat-label>
+                <input matInput placeholder="Telefono de la empresa" formControlName="eTelefono" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Nombre del gerente</mat-label>
+                <input matInput placeholder="Nombre del gerente" formControlName="eGerente" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Correo de la empresa</mat-label>
+                <input matInput placeholder="correo de la empresa" formControlName="eEmail" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select aria-placeholder="Tipo" placeholder="Tipo de Empresa"  formControlName="eTipo">
+                    <mat-option value="Privada">Privada</mat-option>
+                    <mat-option value="Publica">Publica</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Fecha de entrega</mat-label>
+                <input matInput type="date" placeholder="Fecha" formControlName="fecha">
+            </mat-form-field>
+            <div class="container-input-file">
+                <label class="custom-file">
+                    <input type="file" formControlName="imagePost" (change)="handleImage($event)"  />
+                    <mat-icon>cloud_upload</mat-icon><span>Cargar Archivo</span>
+                </label>
+            </div>
+            <div class="container-button">
+                <input type="submit" class="mat-flat-button" value="Enviar Solicitud" [mat-dialog-close]="true">
+            </div>
+    </form>
+</div>
